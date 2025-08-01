@@ -1,0 +1,49 @@
+const student = {
+  name: "harsha ",
+  age: 19,
+  course: "Computer Science"
+};
+
+// Destructure properties
+const { name, age } = student;
+console.log(name);
+console.log(age); 
+
+
+const book = {
+  title: "The Alchemist",
+  author: "Paulo Coelho"
+};
+const { title, pages = 300 } = book;
+console.log(title);
+console.log(pages); 
+
+3. Destructuring Nested Objects
+
+const user = {
+  username: "harsha123",
+  address: {
+    city: "coimbatore",
+    pin: 641025
+  }
+};
+
+const { address: { city, pin } } = user;
+console.log(city); 
+console.log(pin); 
+
+
+
+const original = {
+  a: 1,
+  b: 2
+};
+
+const clone = { ...original };
+console.log(clone); 
+
+const obj1 = { x: 10, y: 20 };
+const obj2 = { y: 99, z: 30 };
+
+const merged = { ...obj1, ...obj2 };
+console.log(merged); 
